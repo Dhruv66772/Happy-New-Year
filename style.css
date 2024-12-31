@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Splash Screen */
+.splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #ff5f6d, #ffc371);
+  z-index: 2;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+.splash-screen h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 3s forwards;
+}
+
+.new-year-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffe08c;
+  text-shadow: 0px 0px 10px #ffd700, 0px 0px 20px #ff6347;
+  margin-bottom: 1rem;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.time {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.time span {
+  font-size: 2rem;
+  margin-right: 0.2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Fireworks Canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
